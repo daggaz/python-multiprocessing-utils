@@ -140,7 +140,7 @@ class SharedRLockMixin(object):
                 with lock:
                     with lock:
                         locked[i].set()
-                        sleep(0.5)
+                        sleep(0.1)
                         with worker_lock:
                             some_value[0] += 1
             except Exception as e:  # pragma: no cover
@@ -193,7 +193,7 @@ class SharedRLockMixin(object):
                         for event in locking:
                             event.wait()
                             event.clear()
-                        sleep(0.5)
+                        sleep(0.1)
 
                         # check that the shared lock workers didn't
                         # update some_value

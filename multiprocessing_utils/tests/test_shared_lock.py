@@ -173,7 +173,7 @@ class SharedLockTestCaseMixin(object):
             try:
                 with lock:
                     locked[i].set()
-                    sleep(0.5)
+                    sleep(0.1)
                     with worker_lock:
                         some_value[0] += 1
             except Exception as e:  # pragma: no cover
@@ -253,7 +253,7 @@ class SharedLockTestCaseMixin(object):
             for event in locking:
                 event.wait()
 
-            sleep(0.5)
+            sleep(0.1)
 
             # update some_value
             # shared lock workers will check for this value once
@@ -291,7 +291,7 @@ class SharedLockTestCaseMixin(object):
                 locking[i].set()
                 with lock:
                     locked[i].set()
-                    sleep(0.5)
+                    sleep(0.1)
                     with worker_lock:
                         some_value[0] += 1
             except Exception as e:  # pragma: no cover
@@ -341,7 +341,7 @@ class SharedLockTestCaseMixin(object):
             for event in locking:
                 event.wait()
                 event.clear()
-            sleep(0.5)
+            sleep(0.1)
 
             # check that the shared lock workers didn't update some_value
             self.assertEqual(some_value[0], N)
