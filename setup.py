@@ -18,7 +18,7 @@ with open(path.join(here, 'requirements.txt'), encoding='utf-8') as requirements
 
 setup(
     name = 'multiprocessing_utils',
-    version = '0.2',
+    version = '0.3',
     url='https://github.com/daggaz/python-multiprocessing-utils',
     description='Multiprocessing utils (shared locks and thread locals)',
     long_description=long_description,
