@@ -18,7 +18,7 @@ with open(path.join(here, 'requirements.txt'), encoding='utf-8') as requirements
 
 setup(
     name = 'multiprocessing_utils',
-    version = '0.3',
+    version = '0.4',
     url='https://github.com/daggaz/python-multiprocessing-utils',
     description='Multiprocessing utils (shared locks and thread locals)',
     long_description=long_description,
@@ -26,7 +26,7 @@ setup(
     author_email='jamie_cockburn@hotmail.co.uk',
     license='MIT',
     classifiers=[
-        'Development Status :: 3 - Alpha',
+        'Development Status :: 4 - Beta',
 
         # Indicate who your project is intended for
         'Intended Audience :: Developers',
